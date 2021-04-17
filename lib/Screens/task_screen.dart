@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey/Models/task_data.dart';
 import 'package:todoey/Widgets/Task_List.dart';
 import 'package:todoey/Widgets/bottomsheet.dart';
-class Taskscreen extends StatefulWidget {
-  @override
-  _TaskscreenState createState() => _TaskscreenState();
-}
+import 'package:todoey/Models/Task.dart';
 
-class _TaskscreenState extends State<Taskscreen> {
+class Taskscreen extends StatelessWidget{
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _TaskscreenState extends State<Taskscreen> {
         onPressed: (){
           showModalBottomSheet(context: context, builder: (context) => SingleChildScrollView(
             
-            child: modalbuilder(context),
+            child: modalbuilder(),
           ),shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),),backgroundColor: Color(0xff757575),
             isScrollControlled: true,
@@ -53,7 +53,7 @@ class _TaskscreenState extends State<Taskscreen> {
                 ),),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
-                  child: Text('37',
+                  child: Text('${Provider.of<task_data>(context).task_length} Tasks',
                   style: TextStyle(
                     fontSize: 18.0,
                     color: Colors.white,
@@ -64,6 +64,7 @@ class _TaskscreenState extends State<Taskscreen> {
           ),
           Expanded(
               child: Container(
+                padding: EdgeInsets.only(top: 2.5),
 
             decoration: BoxDecoration(
               color: Colors.white,

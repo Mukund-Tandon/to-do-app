@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-class Task_tile extends StatefulWidget {
-  @override
-  _Task_tileState createState() => _Task_tileState();
-}
+import 'package:todoey/Models/Task.dart';
+class Task_tile extends StatelessWidget {
 
-class _Task_tileState extends State<Task_tile> {
-  bool ischecked = false;
-  void checkbox_new_state(bool checkbox_status){
-    setState(() {
-      ischecked = checkbox_status;
-    });
-  }
+final bool ischecked;
+final String task_tile_task;
+final Function toggle_task;
+final Function longpress_callback;
+Task_tile({this.ischecked,this.task_tile_task,this.toggle_task,this.longpress_callback});
+  //
+  // void checkbox_new_state(bool checkbox_status){
+
+  // }
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        title: Text('first task',style: TextStyle(decoration: ischecked ? TextDecoration.lineThrough:null),),
-        trailing: Taskcheckbox(checkbox_status: ischecked,toggle_checkbox: checkbox_new_state,)
+      onLongPress: longpress_callback,
+        title: Text(task_tile_task,style: TextStyle(decoration: ischecked ? TextDecoration.lineThrough:null),),
+        trailing: Taskcheckbox(checkbox_status: ischecked,
+          toggle_checkbox: toggle_task,
+    )
     );
   }
 }
