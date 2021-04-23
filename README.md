@@ -1,16 +1,11 @@
 # todoey
 
-A new Flutter application.
+## Thing it can do
+ * Add task
+ * Delete Task
+ * Strike off Task
 
-## Getting Started
+## Some images of App
 
-This project is a starting point for a Flutter application.
+<img src="https://user-images.githubusercontent.com/71614009/115814470-bea84f00-a412-11eb-9b65-198d0211c926.jpg" width ="200"> <img src="https://user-images.githubusercontent.com/71614009/115814474-c0721280-a412-11eb-92bb-94550805d50c.jpg" width ="200"> <img src="https://user-images.githubusercontent.com/71614009/115814476-c1a33f80-a412-11eb-9131-02b9c6ec4f90.jpg" width ="200">
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
